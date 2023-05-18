@@ -23,9 +23,20 @@ class Laptop {
         console.log(`Price is ${this._price}`);
     }
     ;
+    // Encapsulation example
+    colorOfTheDevice() {
+        return this.color;
+    }
+    ;
+    get checkColor() {
+        return this.colorOfTheDevice();
+    }
+    ;
 }
 ;
 const myLaptop = new Laptop('Dell', 56000, 'Black', 11, 5000);
 console.log(myLaptop.price);
 myLaptop.payment = 4000;
 console.log(myLaptop.price);
+// Access encapsulation method
+console.log(myLaptop.checkColor);
